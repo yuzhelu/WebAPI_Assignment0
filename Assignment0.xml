@@ -1,24 +1,23 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 
-<Movies>
+
+<Movies xmlns="Assignment0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://www.w3schools.com/xml/note.xsd">>
+
 	<Movie>
-		<Title></Title>
-		<Year></Year>
-		<Genre></Genre>
-	</Movie>
-	
-	<Movie>
-		<Title></Title>
-		<Year></Year>
-		<Genre></Genre>
+		<Title>The Room</Title>
+		<Year>2003</Year>
+		<Genre>Drama</Genre>
+		<Actor>
+			<Name>Tommy Wiseau</Name>
+			<DateOfBirth>
+				<Month>10</Month>
+				<Day>3</Day>
+				<Year>1955</Year>
+			</DateOfBirth>
+		</Actor>
+		
 	</Movie>
 </Movies>
 
-<Actors>
-	<Actor>
-		<Name></Name>
-		<DateOfBirth></DateOfBirth>
-	</Actor>
-		
-</Actors>
-		
