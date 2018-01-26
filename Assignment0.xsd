@@ -1,17 +1,32 @@
 <? xml version = "1.0" encoding = "UTF-8" ?>
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 targetNamespace="https://www.w3schools.com"
 xmlns="Assignment0"
 elementFormDefault="qualified">
 
-<xs:complexType name "Movies">
+<xs:complexType name ="Movies">
 <xs:element name = "Movie" type = "Movies" minOccurs = "1"/>
 </xs:complexType>
 
 <xs:complexType name="Movie">
 	<xs:sequence>
-		<xs:element name = "Title" type = "xs:string"/>
-		<xs:element name = "Year" type = "xs:integer"/>
+		<xs:element name = "Title">
+			<xs:simpleType>
+				<xs:restriction base = "xs:string">
+					<xs:minLength value = "1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		
+		<xs:element name = "Year">
+			<xs:simpleType>
+				<xs:restriction base = "xs:integer">
+					<xs:pattern value = "[0-9][0-9][0-9][0-9]"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		
 		<xs:element name = "Genre">
 			<xs:simpleType>
 				<xs:restriction base = "xs:string">
@@ -28,7 +43,7 @@ elementFormDefault="qualified">
 			</xs:simpleType>
 		</xs:element>
 		
-		<xs:element name = "Actor" type = "actortype" maxoccurs = "unbounded"/>
+		<xs:element name = "Actor" type = "actortype" minoccurs = "1"/>
 	
 	</xs:sequence>
 </xs:complexType>
