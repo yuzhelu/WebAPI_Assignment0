@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<Movies>
+	<Movie>
+		<Title></Title>
+		<Year></Year>
+		<Genre></Genre>
+	</Movie>
+	
+	<Movie>
+		<Title></Title>
+		<Year></Year>
+		<Genre></Genre>
+	</Movie>
+</Movies>
+
+<Actors>
+	<Actor>
+		<Name></Name>
+		<DateOfBirth></DateOfBirth>
+	</Actor>
+		
+</Actors>
+		
