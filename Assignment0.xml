@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<movies>
+    <movie>
+        <title>The Room</title>
+        <year>2003</year>
+        <genre>Drama</genre>
+
+        <actor>
+            <name>Tommy Wiseau</name>
+            <DateOfBirth>10-03-1955</DateOfBirth>
+        </actor>
+
+    </movie>
+
+</movies>

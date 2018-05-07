@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace ="https://www.w3schools.com"
+           elementFormDefault="qualified">
+    <xs:element name = "movies">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "movie" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name = "title">
+                                <xs:simpleType>
+                                    <xs:restriction base = "xs:string">
+                                        <xs:minLength value ="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name="year">
+                                <xs:simpleType>
+                                    <xs:restriction base ="xs:integer">
+                                            <xs:totalDigits value="4"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name="genre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value = "Action"/>
+                                        <xs:enumeration value = "Adventure"/>
+                                        <xs:enumeration value = "Comedy"/>
+                                        <xs:enumeration value = "Drama"/>
+                                        <xs:enumeration value = "Fantasy"/>
+                                        <xs:enumeration value = "Horror"/>
+                                        <xs:enumeration value = "Mystery"/>
+                                        <xs:enumeration value = "Thriller"/>
+                                        <xs:enumeration value = "Western"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="actor" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name = "name">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:minLength value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name = "DateOfBirth">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="d\d-\d\d-\d\d\d\d"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+
+    </xs:element>
+
+
+
+</xs:schema>
